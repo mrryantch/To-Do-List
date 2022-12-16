@@ -20,36 +20,39 @@ const TagsBar = ({ sortAscending, setSortAscending }: TagsBarProps) => {
   const dispatch = useDispatch();
   return (
     <div className={styles.tagsBar}>
-      <button
-        className={styles.button}
-        onClick={() => {
-          dispatch(updateActiveFilter(true));
-          dispatch(updateCompletedFilter(false));
-          dispatch(updateShowAllFilter(false));
-        }}
-      >
-        Active
-      </button>
-      <button
-        className={styles.button}
-        onClick={() => {
-          dispatch(updateActiveFilter(false));
-          dispatch(updateCompletedFilter(true));
-          dispatch(updateShowAllFilter(false));
-        }}
-      >
-        Completed
-      </button>
-      <button
-        className={styles.button}
-        onClick={() => {
-          dispatch(updateActiveFilter(false));
-          dispatch(updateCompletedFilter(false));
-          dispatch(updateShowAllFilter(true));
-        }}
-      >
-        All
-      </button>
+      <div className={styles.buttonGroup}>
+        <button
+          className={styles.button}
+          onClick={() => {
+            dispatch(updateActiveFilter(true));
+            dispatch(updateCompletedFilter(false));
+            dispatch(updateShowAllFilter(false));
+          }}
+        >
+          Active
+        </button>
+        <button
+          className={styles.button}
+          onClick={() => {
+            dispatch(updateActiveFilter(false));
+            dispatch(updateCompletedFilter(true));
+            dispatch(updateShowAllFilter(false));
+          }}
+        >
+          Completed
+        </button>
+        <button
+          className={styles.button}
+          onClick={() => {
+            dispatch(updateActiveFilter(false));
+            dispatch(updateCompletedFilter(false));
+            dispatch(updateShowAllFilter(true));
+          }}
+        >
+          All
+        </button>
+      </div>
+
       <div className={styles.sortButton}>
         <IconButton
           sx={{
