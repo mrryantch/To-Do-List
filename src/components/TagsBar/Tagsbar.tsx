@@ -50,29 +50,31 @@ const TagsBar = ({ sortAscending, setSortAscending }: TagsBarProps) => {
       >
         All
       </button>
-      <IconButton
-        sx={{
-          float: "right",
-          borderRadius: "0",
-          fontSize: "13px",
-          color: "black",
-          height: "22px",
-          alignItems: "center",
-          justifyContent: "center",
-          marginRight: "8px",
-        }}
-        onClick={() => {
-          setSortAscending(!sortAscending);
-          if (sortAscending) {
-            dispatch(sortAscendingTrigger());
-          } else {
-            dispatch(sortDescendingTrigger());
-          }
-        }}
-      >
-        <SortIcon />
-        {sortAscending ? "Newest - Oldest" : "Oldest - Newest"}
-      </IconButton>
+      <div className={styles.sortButton}>
+        <IconButton
+          sx={{
+            float: "right",
+            borderRadius: "0",
+            fontSize: "13px",
+            color: "black",
+            height: "22px",
+            alignItems: "center",
+            justifyContent: "center",
+            marginRight: "8px",
+          }}
+          onClick={() => {
+            setSortAscending(!sortAscending);
+            if (sortAscending) {
+              dispatch(sortAscendingTrigger());
+            } else {
+              dispatch(sortDescendingTrigger());
+            }
+          }}
+        >
+          <SortIcon />
+          {sortAscending ? "Newest - Oldest" : "Oldest - Newest"}
+        </IconButton>
+      </div>
     </div>
   );
 };

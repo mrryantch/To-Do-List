@@ -4,6 +4,9 @@
   margin-right: 16px;
   margin-bottom: 32px;
   margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   @media screen and (min-width: 480px) {
     margin-left: 0px;
@@ -29,5 +32,18 @@
     border-style: inset;
     background-color: grey;
     color: white;
+  }
+
+  @media screen and (min-width: 1024px) {
+    &:first-child {
+      margin-left: 72px;
+    }
+  }
+}
+
+.sortButton {
+  margin-top: 8px;
+  @media screen and (min-width: 480px) {
+    margin-top: 0px;
   }
 }
