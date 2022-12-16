@@ -53,7 +53,6 @@ const TagsBar = ({ sortAscending, setSortAscending }: TagsBarProps) => {
       <div className={styles.sortButton}>
         <IconButton
           sx={{
-            float: "right",
             borderRadius: "0",
             fontSize: "13px",
             color: "black",

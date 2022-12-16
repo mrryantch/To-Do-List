@@ -4,6 +4,8 @@ The intention of this project is to demostrate coding capabilities by creating a
 
 Application is deployed to: [Link](https://to-do-list-1ivom6q64-mrryantch.vercel.app/)
 
+## Instructions
+
 ```sh
 npm install
 npm start
