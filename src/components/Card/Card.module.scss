@@ -1,0 +1,42 @@
+.cardContainer {
+  border: 1px solid black;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  height: 150px;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 8px;
+}
+
+.text {
+  float: left;
+}
+.inputText {
+  border: 1px solid black;
+  width: 100%;
+  margin-top: 8px;
+  resize: none;
+}
+
+.column {
+  float: left;
+  width: 80%;
+  margin-bottom: 16px;
+  padding: 0 10px;
+
+  @media screen and (min-width: 480px) {
+    width: 40%;
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 20%;
+  }
+}
+
+.buttonGroup {
+  position: absolute;
+  bottom: 12px;
+  right: 0;
+}
